@@ -6,9 +6,6 @@ services:
     #-------------------------------#
     # Spark 🧮                      #
     #-------------------------------#
-    #sembra dare problemi nel creare la connessione all'indice elastic search
-    #forse è perchè quando cerca di connettersi l'indice non è ancora stato creato, potremmo dover mettere una dipendenza
-    #oppure modificare il codice python affinchè se fallisce la connessione la riprova qualche secondo dopo
     spark:
         build: 
             context: spark/streaming
