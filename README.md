@@ -26,9 +26,8 @@ Se dovesse essere così, dovrebbe essere sufficiente lanciare questi 2 comandi p
 >- wsl -d docker-desktop
 >- sysctl -w vm.max_map_count=262144
 
+## Link utili
 Qualche istante dopo aver lanciato la docker compose up sarà possibile accedere ad alcuni servizi, tra cui ovviamente Kibana per visualizzare la/e dashboard 
-
-Link utili
 
 |Servizio                | link                   | Note                                              |
 |------------------------|------------------------|---------------------------------------------------|
