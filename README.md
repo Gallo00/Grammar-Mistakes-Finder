@@ -11,4 +11,7 @@ facendo però attenzione che prima sia stato lanciato il comando <br>
 >- docker compose down <br>
 
 Se si volessero resettare tutti i dati relativi all'indice Elastic Search e al servizio Kibana lanciare <br>
->- docker compose down -v
+>- docker compose down -v <br>
+
+Nel caso siano state fatte modifiche al progetto, lanciare per sicurezza il comando
+>- docker compose up --build <br>
