@@ -5,7 +5,7 @@ Viene fornita una dashboard Kibana per la data visualization. <br>
 
 ## Teconologie usate
 
-|Tecnologia              | link                                 | Note                                      |
+|Tecnologia              | Link                                 | Note                                      |
 |------------------------|--------------------------------------|-------------------------------------------|
 |Twitter (API)           |https://developer.twitter.com/en      | E' necessario creare un account developer |
 |Docker                  |https://www.docker.com/               | Serve per containerizzare i servizi       |
@@ -16,7 +16,7 @@ Viene fornita una dashboard Kibana per la data visualization. <br>
 |Kibana                  |https://www.elastic.co/kibana/        | Data Visualization                        |
 |Language Tool           |https://languagetool.org              | Servizio che dato un testo in una certa lingua ne corregge gli errori grammaticali                     |
 |language_tool_python                  |https://github.com/jxmorris12/language_tool_python/ | Wrapper in python che mette a disposizione una libreria ad alto livello per richiamare le API di Language Tool                       |
-|Python + libreria pyspark|https://spark.apache.org/docs/latest/api/python/index.html      |Libreria python per interagire manovrare il cluster Spark                    |
+|Python + libreria pyspark|https://spark.apache.org/docs/latest/api/python/index.html      |Libreria python per manovrare il cluster Spark                    |
 ## Architettura dell'applicazione
 ![Pipeline](/review/img/pipeline.png?raw=true "Architettura dell'applicazione")
 
@@ -51,7 +51,7 @@ Se dovesse essere così, dovrebbe essere sufficiente lanciare questi 2 comandi p
 ## Link utili
 Qualche istante dopo aver lanciato la docker compose up sarà possibile accedere ad alcuni servizi, tra cui ovviamente Kibana per visualizzare la/e dashboard 
 
-|Servizio                | link                   | Note                                              |
+|Servizio                | Link                   | Note                                              |
 |------------------------|------------------------|---------------------------------------------------|
 |KafkaUI                 |http://localhost:8080   | Per controllare lo stato dei topic e dei messaggi |
 |Cluster Elastic Search  |https://localhost:9200/ | Per visualizzare l'indice                         |
