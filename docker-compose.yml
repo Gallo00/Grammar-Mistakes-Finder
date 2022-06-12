@@ -124,7 +124,7 @@ services:
 
 
     #-------------------------------#
-    # SETUP ES e KIBANA🎬           #
+    # SETUP ES e KIBANA 👨‍🏫          #
     #-------------------------------#
     setup:
       image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
@@ -180,7 +180,7 @@ services:
             - tap
 
     #-------------------------------#
-    # ELASTIC SEARCH  🎬           #
+    # ELASTIC SEARCH  💾            #
     #-------------------------------#
     es01:
       depends_on:
@@ -231,7 +231,7 @@ services:
 
 
     #-------------------------------#
-    # KIBANA🎬                      #
+    # KIBANA 📺                     #
     #-------------------------------#
     kibana:
       depends_on:
