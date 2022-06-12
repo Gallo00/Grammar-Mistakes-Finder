@@ -21,8 +21,8 @@ Qualche istante dopo aver lanciato la docker compose up sarà possibile accedere
 
 Link utili
 
-|Servizio    | link                                       | Note               |
-|--------    |------                                      |-------------
-|KafkaUI     |http://localhost:8080                       | Per controllare lo stato dei topic e dei messaggi |
-|Cluster Elastic Search               |https://localhost:9200/	                   | Per visualizzare l'indice |
-|Kibana                               |http://localhost:5601/	                   | Per accedere alla dashboard |
+|Servizio                | link                   | Note                                              |
+|------------------------|------------------------|---------------------------------------------------|
+|KafkaUI                 |http://localhost:8080   | Per controllare lo stato dei topic e dei messaggi |
+|Cluster Elastic Search  |https://localhost:9200/ | Per visualizzare l'indice                         |
+|Kibana                  |http://localhost:5601/  | Per accedere alla dashboard                       |
