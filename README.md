@@ -5,6 +5,7 @@ E' necessario essere nella cartella projTAP.<br>
 
 Per usare l'applicazione la prima volta lanciare il comando <br>
 >- docker compose up --build <br>
+
 Dopo aver stoppato l'esecuzione si può riprendere lanciando <br>
 >- docker compose up  <br>
 facendo però attenzione che prima sia stato lanciato il comando <br>
