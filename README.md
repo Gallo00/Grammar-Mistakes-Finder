@@ -1,4 +1,23 @@
 # Calcolo degli errori grammaticali nei testi dei Tweet in real time
+La seguente applicazione fornisce un servizio stream processing di Tweets ricavati in real time. <br>
+L'obiettivo è per ogni tweet ottenere il numero di errori grammaticali presenti nel testo. <br>
+Viene fornita una dashboard Kibana per la data visualization. <br>
+
+## Teconologie usate
+
+|Tecnologia              | link                                 | Note                                      |
+|------------------------|--------------------------------------|-------------------------------------------|
+|Twitter (API)           |https://developer.twitter.com/en      | E' necessario creare un account developer |
+|Docker                  |https://www.docker.com/               | Serve per containerizzare i servizi       |
+|Logstash                |https://www.elastic.co/logstash/      | Data Ingestion                            |
+|Kafka                   |https://kafka.apache.org/             | Data streaming                            |
+|Spark                   |https://spark.apache.org/             | Data Processing                           | 
+|Elastic Search          |https://www.elastic.co/elasticsearch/ | Data Indexing                             |
+|Kibana                  |https://www.elastic.co/kibana/        | Data Visualization                        |
+## Architettura dell'applicazione
+![Pipeline](/projTAP/review/img/pipeline.png?raw=true "Architettura dell'applicazione")
+
+## Eseguire l'applicazione 
 
 Nota: fare attenzione alla cartella in cui si lanciano i comandi "docker compose".<br>
 E' necessario essere nella cartella projTAP.<br>
