@@ -21,6 +21,7 @@ Nel caso siano state fatte modifiche al progetto, lanciare per sicurezza il coma
 Potrebbe il container es01 uscire con exit status 78, andando a vedere gli errori probabilmente ci si imbatterà nel messaggio <br>
 >- "Elasticsearch: Max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]". <br>
 L'errore è causato perchè la memoria concessa alla WSL è troppo bassa. <br>
+
 Se dovesse essere così, dovrebbe essere sufficiente lanciare questi 2 comandi prima della compose up: <br>
 >- wsl -d docker-desktop
 >- sysctl -w vm.max_map_count=262144
