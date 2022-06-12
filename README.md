@@ -15,7 +15,7 @@ Viene fornita una dashboard Kibana per la data visualization. <br>
 |Elastic Search          |https://www.elastic.co/elasticsearch/ | Data Indexing                             |
 |Kibana                  |https://www.elastic.co/kibana/        | Data Visualization                        |
 ## Architettura dell'applicazione
-![Pipeline](/projTAP/review/img/pipeline.png?raw=true "Architettura dell'applicazione")
+![Pipeline](/review/img/pipeline.png?raw=true "Architettura dell'applicazione")
 
 ## Eseguire l'applicazione 
 
