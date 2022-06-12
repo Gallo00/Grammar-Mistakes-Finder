@@ -16,3 +16,13 @@ Se si volessero resettare tutti i dati relativi all'indice Elastic Search e al s
 
 Nel caso siano state fatte modifiche al progetto, lanciare per sicurezza il comando
 >- docker compose up --build <br>
+
+Qualche istante dopo aver lanciato la docker compose up sarà possibile accedere ad alcuni servizi, tra cui ovviamente Kibana per visualizzare la/e dashboard 
+
+Link utili
+
+|Servizio    | link                                       | Note               |
+|--------    |------                                      |-------------
+|KafkaUI     |http://localhost:8080                       | Per controllare lo stato dei topic e dei messaggi |
+|Cluster Elastic Search               |https://localhost:9200/	                   | Per visualizzare l'indice |
+|Kibana                               |http://localhost:5601/	                   | Per accedere alla dashboard |
