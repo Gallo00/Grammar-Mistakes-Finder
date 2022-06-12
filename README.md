@@ -14,6 +14,9 @@ Viene fornita una dashboard Kibana per la data visualization. <br>
 |Spark                   |https://spark.apache.org/             | Data Processing                           | 
 |Elastic Search          |https://www.elastic.co/elasticsearch/ | Data Indexing                             |
 |Kibana                  |https://www.elastic.co/kibana/        | Data Visualization                        |
+|Language Tool           |https://languagetool.org              | Servizio che dato un testo in una certa lingua ne corregge gli errori grammaticali                     |
+|language_tool_python                  |https://github.com/jxmorris12/language_tool_python/ | Wrapper in python che mette a disposizione una libreria ad alto livello per richiamare le API di Language Tool                       |
+|Python + libreria pyspark|https://spark.apache.org/docs/latest/api/python/index.html      |Libreria python per interagire manovrare il cluster Spark                    |
 ## Architettura dell'applicazione
 ![Pipeline](/review/img/pipeline.png?raw=true "Architettura dell'applicazione")
 
