@@ -24,7 +24,7 @@ Viene fornita una dashboard Kibana per la data visualization. <br>
 ## Eseguire l'applicazione 
 
 Nota: fare attenzione alla cartella in cui si lanciano i comandi "docker compose".<br>
-E' necessario essere nella cartella projTAP.<br>
+E' necessario essere nella cartella del progetto.<br>
 
 Per usare l'applicazione la prima volta lanciare il comando <br>
 >- docker compose up --build <br>
@@ -59,4 +59,4 @@ Qualche istante dopo aver lanciato la docker compose up sarà possibile accedere
 |Kibana                  |http://localhost:5601/  | Per accedere alla dashboard                       |
 
 ## Approfodimenti
-Per approfondire visualizzare https://github.com/Gallo00/projTAP/blob/main/review/review.ipynb
+Per approfondire visualizzare https://github.com/Gallo00/Grammar-Mistakes-Finder/blob/main/review/review.ipynb
