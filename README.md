@@ -1,4 +1,5 @@
-# Calcolo degli errori grammaticali nei testi dei Tweet in real time
+# Stream Processing per l'identificazione di Errori Grammaticali in varie lingue
+## Progetto per il corso universitario Technologies for Advanced Programming AA 2021/22
 La seguente applicazione fornisce un servizio stream processing di Tweets ricavati in real time. <br>
 L'obiettivo è per ogni tweet ottenere il numero di errori grammaticali presenti nel testo. <br>
 Viene fornita una dashboard Kibana per la data visualization. <br>
