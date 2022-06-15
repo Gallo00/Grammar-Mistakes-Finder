@@ -69,7 +69,6 @@ def process_batch(batch_df, batch_id):
     #funzione per scrivere/mandare sull'indice elastic_index i dati
     for idx, row in enumerate(batch_df.collect()):
         row_dict = row.asDict()
-        id = f'{batch_id}-{idx}'
         resp = es.index(
             index=elastic_index, 
             document=row_dict)
