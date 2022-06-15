@@ -72,7 +72,6 @@ def process_batch(batch_df, batch_id):
         id = f'{batch_id}-{idx}'
         resp = es.index(
             index=elastic_index, 
-            id=id, 
             document=row_dict)
         print(resp)
 
