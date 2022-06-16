@@ -29,23 +29,27 @@ E' necessario essere nella cartella del progetto.<br>
 Per usare l'applicazione la prima volta lanciare il comando <br>
 >- docker compose up --build <br>
 
-Dopo aver stoppato l'esecuzione si può riprendere lanciando <br>
->- docker compose up  <br>
-facendo però attenzione che prima sia stato lanciato il comando <br>
+Dopo aver stoppato l'esecuzione lanciare il comando <br>
+>- docker compose down <br>
+(senza questa operazione al prossimo avvio dell'applicazione spark-streaming andrà in errore) <br>
+
+Se si volessero anche resettare tutti i dati relativi all'indice Elastic Search e al servizio Kibana lanciare <br>
+>- docker compose down -v <br>
+al posto del comando <br>
 >- docker compose down <br>
 
-Se si volessero resettare tutti i dati relativi all'indice Elastic Search e al servizio Kibana lanciare <br>
->- docker compose down -v <br>
+Per riusare l'applicazione lanciare il comando <br>
+>- docker compose up <br>
 
-Nel caso siano state fatte modifiche al progetto, lanciare per sicurezza il comando
+Nel caso invece siano state fatte modifiche al progetto, lanciare per sicurezza il comando
 >- docker compose up --build <br>
 
 ## Exit status 78 di es01 con esecuzione da WSL
 Il container es01 potrebbe uscire con exit status 78, andando a vedere gli errori probabilmente ci si imbatterà nel messaggio <br>
 >- "Elasticsearch: Max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]". <br>
-L'errore è causato perchè la memoria concessa alla WSL è troppo bassa. <br>
+L'errore è causato dal fatto che la memoria concessa alla WSL è troppo bassa. <br>
 
-Se dovesse essere così, dovrebbe essere sufficiente lanciare questi 2 comandi prima della compose up: <br>
+Se dovesse essere così, dovrebbe essere sufficiente lanciare questi 2 comandi su un prompt prima della compose up: <br>
 >- wsl -d docker-desktop
 >- sysctl -w vm.max_map_count=262144
 
