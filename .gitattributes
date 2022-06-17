@@ -1,4 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Disable (programming) language detector to detect jupyter notebook
+# Notebooks in these 2 dirs will be not calculated in Languages Percentage
 review/* linguist-vendored
 review/.ipynb_checkpoints/* linguist-vendored
