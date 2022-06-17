@@ -1,4 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
 review/* linguist-vendored
 review.ipynb linguist-vendored=false
