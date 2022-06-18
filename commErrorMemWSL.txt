@@ -1,6 +1,4 @@
-Se il container es01 dovesse uscire con codice 78, probabilmente è dovuto alla limitazione di memoria alla wsl.
-L'errore dovrebbe essere: "Elasticsearch: Max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]"
-Per risolvere: prima di fare "docker compose up", eseguire questi 2 comandi (NON SULLA WSL) in ordine
-
+Exit status 78 by es01 using WSL?
+Launch these commands before a new compose up using a prompt
 1: wsl -d docker-desktop
 2: sysctl -w vm.max_map_count=262144
