@@ -18,6 +18,24 @@ Viene fornita una dashboard Kibana per la data visualization. <br>
 |Language Tool           |https://languagetool.org              | Servizio che dato un testo in una certa lingua ne corregge gli errori grammaticali                     |
 |language_tool_python                  |https://github.com/jxmorris12/language_tool_python/ | Wrapper in python che mette a disposizione una libreria ad alto livello per richiamare le API di Language Tool                       |
 |Python + libreria pyspark|https://spark.apache.org/docs/latest/api/python/index.html      |Libreria python per manovrare il cluster Spark                    |
+## LanguageTool
+Come già anticipato, LanguageTool è un ottimo strumento (utilizzato anche da aziende molto importanti come riportato nell'home page) per individuare (e anche correggere) errori grammaticali presenti in un testo. <br>
+La potenza di questo strumento è data dal fatto che supporti moltissime lingue oltre all'inglese. <br>
+Per semplificarci la vita, invece di interagire direttamente con le API, useremo una libreria in Python che farà il lavoro sporco per noi. <br>
+La libreria, come riportato nella tabella, si chiama language_tool_python. <br>
+**Esempio in python** 
+```python
+import language_tool_python
+
+tool = language_tool_python.LanguageToolPublicAPI('it')
+s = "sto faccendo un erore gramma"
+matches = tool.check(s)
+print(len(matches)) #4
+```
+In questo caso usiamo LanguageToolPublicApi che comporta ovviamente richiamare le API (e sostanzialmente far svolgere i calcoli su un server remoto). <br>
+Un'alternativa potrebbe essere richiamare la funzione LanguageTool('it') che sostanzialmente darebbe lo stesso risultato ma creando un server sulla macchina locale, quindi i calcoli verrebbero fatti in locale. <br>
+La scelta da prendere dipende da due variabili che sono la potenza di calcolo della macchina e la qualità della connessione alla rete. Per approfondire vedere la repo tool https://github.com/jxmorris12/language_tool_python <br>
+
 ## Architettura dell'applicazione
 ![Pipeline](/review/img/pipeline.png?raw=true "Architettura dell'applicazione")
 
@@ -63,4 +81,4 @@ Qualche istante dopo aver lanciato la docker compose up sarà possibile accedere
 |Kibana                  |http://localhost:5601/  | Per accedere alla dashboard                       |
 
 ## Approfodimenti
-Per approfondire visualizzare https://github.com/Gallo00/Grammar-Mistakes-Finder/blob/main/review/review.ipynb
+Per approfondire vedere https://github.com/Gallo00/Grammar-Mistakes-Finder/blob/main/review/review.ipynb
