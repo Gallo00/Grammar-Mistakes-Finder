@@ -1,28 +1,28 @@
-# Stream Processing per l'identificazione di Errori Grammaticali in varie lingue
-## Progetto per il corso universitario Technologies for Advanced Programming AA 2021/22
-La seguente applicazione fornisce un servizio stream processing di Tweets ricavati in real time. <br>
-L'obiettivo è per ogni tweet ottenere il numero di errori grammaticali presenti nel testo. <br>
-Viene fornita una dashboard Kibana per la data visualization. <br>
+# Stream Processing for detection of Grammatical Errors in various languages
+## Project for the university course "Technologies for advanced programming" AA 2021/22
+The following application provides a stream processing service of Tweets obtained in real time. <br>
+The goal is to get for each tweet the number of grammatical errors in the text. <br>
+A Kibana dashboard is provided for data visualization. <br>
 
-## Teconologie usate
+## Technologies used
 
-|Tecnologia              | Link                                 | Note                                      |
-|------------------------|--------------------------------------|-------------------------------------------|
-|Twitter (API)           |https://developer.twitter.com/en      | E' necessario creare un account developer |
-|Docker                  |https://www.docker.com/               | Serve per containerizzare i servizi       |
-|Logstash                |https://www.elastic.co/logstash/      | Data Ingestion                            |
-|Kafka                   |https://kafka.apache.org/             | Data streaming                            |
-|Spark                   |https://spark.apache.org/             | Data Processing                           | 
-|Elastic Search          |https://www.elastic.co/elasticsearch/ | Data Indexing                             |
-|Kibana                  |https://www.elastic.co/kibana/        | Data Visualization                        |
-|Language Tool           |https://languagetool.org              | Servizio che dato un testo in una certa lingua ne corregge gli errori grammaticali                     |
-|language_tool_python                  |https://github.com/jxmorris12/language_tool_python/ | Wrapper in python che mette a disposizione una libreria ad alto livello per richiamare le API di Language Tool                       |
-|Python + libreria pyspark|https://spark.apache.org/docs/latest/api/python/index.html      |Libreria python per manovrare il cluster Spark                    |
+|Tecnologia              | Link                                 | Note                                         |
+|------------------------|--------------------------------------|----------------------------------------------|
+|Twitter (API)           |https://developer.twitter.com/en      | It's necessary to create a developer account |
+|Docker                  |https://www.docker.com/               | Used to containerize services                |
+|Logstash                |https://www.elastic.co/logstash/      | Data Ingestion                               |
+|Kafka                   |https://kafka.apache.org/             | Data streaming                               |
+|Spark                   |https://spark.apache.org/             | Data Processing                              | 
+|Elastic Search          |https://www.elastic.co/elasticsearch/ | Data Indexing                                |
+|Kibana                  |https://www.elastic.co/kibana/        | Data Visualization                           |
+|Language Tool           |https://languagetool.org              | Service that, given a text in a certain language, corrects its grammatical errors                     |
+|language_tool_python                  |https://github.com/jxmorris12/language_tool_python/ | Python wrapper that provides a high-level library to call the Language Tool APIs                       |
+|Python + libreria pyspark|https://spark.apache.org/docs/latest/api/python/index.html      |Python library for maneuvering the Spark cluster                    |
 ## LanguageTool
-LanguageTool è un ottimo strumento (utilizzato anche da aziende molto importanti come riportato nell'home page) per individuare (e anche correggere) errori grammaticali presenti in un testo. <br>
-La potenza di questo strumento è data dal fatto che supporti moltissime lingue oltre all'inglese. <br>
-Per semplificarci la vita, invece di interagire direttamente con le API, useremo una libreria in Python che farà il lavoro sporco per noi. <br>
-La libreria, come riportato nella tabella, si chiama language_tool_python. <br>
+LanguageTool is an excellent tool (also used by very important companies as reported on the home page) to identify (and even correct) grammatical errors in a text. <br>
+The power of this tool is that it supports many languages besides English. <br>
+To make our life easier, instead of interacting directly with the API, we will use a library in Python that will do the dirty work for us. <br>
+The library, as shown in the table, is called language_tool_python. <br>
 **Codice di esempio** 
 ```python
 import language_tool_python
@@ -32,12 +32,12 @@ s = "sto faccendo un erore gramma"
 matches = tool.check(s)
 print(len(matches)) #4
 ```
-In questo caso usiamo LanguageToolPublicAPI che comporta ovviamente richiamare le API (e sostanzialmente far svolgere i calcoli su un server remoto). <br>
-Un'alternativa potrebbe essere richiamare la funzione LanguageTool('it') che sostanzialmente darebbe lo stesso risultato ma creando un server sulla macchina locale, quindi i calcoli verrebbero fatti in locale. <br>
-La scelta da prendere dipende da due variabili che sono la potenza di calcolo della macchina e la qualità della connessione alla rete. Per approfondire vedere la repo del wrapper https://github.com/jxmorris12/language_tool_python <br>
+In this case we use LanguageToolPublicAPI which obviously involves calling the API (and basically having the calculations done on a remote server). <br>
+An alternative could be to call the LanguageTool('it') function which would basically give the same result but creating a server on the local machine, so the calculations would be done locally. <br>
+The choice depends on two variables which are the computing power of the machine and the quality of connection to the network. View more on https://github.com/jxmorris12/language_tool_python <br>
 
-## Architettura dell'applicazione
-![Pipeline](/review/img/pipeline.png?raw=true "Architettura dell'applicazione")
+## Application architecture
+![Pipeline](/review/img/pipeline.png?raw=true "Application architecture")
 
 ## Eseguire l'applicazione 
 Prima di eseguire l'applicazione è necessario modificare il file logstash.conf presente nella cartella logstash/pipeline/. <br>
