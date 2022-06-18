@@ -1,3 +1,5 @@
+#ESEMPIO SCRIPT CHE SCRIVE SU ELASTIC SEARCH (non è usato nella pipeline)
+
 from datetime import datetime
 from elasticsearch import Elasticsearch
 

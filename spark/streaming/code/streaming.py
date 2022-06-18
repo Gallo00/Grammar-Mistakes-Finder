@@ -12,6 +12,7 @@ APP_NAME = 'compute_grammar_mistakes'
 APP_BATCH_INTERVAL = 1
 #tool = language_tool_python.LanguageToolPublicAPI('en') 
 
+
 elastic_host="https://es01:9200"
 elastic_index="tweets"
 
@@ -27,6 +28,7 @@ es_mapping = {
     }
 }
 
+#NEL FILE ca.crt SI PUO' VEDERE LA "FORMA" CHE DOVREBBE AVERE UN CERTIFICATO
 es = Elasticsearch(
     hosts=elastic_host,
     ca_certs="/app/certs/ca/ca.crt",
