@@ -19,7 +19,7 @@ Viene fornita una dashboard Kibana per la data visualization. <br>
 |language_tool_python                  |https://github.com/jxmorris12/language_tool_python/ | Wrapper in python che mette a disposizione una libreria ad alto livello per richiamare le API di Language Tool                       |
 |Python + libreria pyspark|https://spark.apache.org/docs/latest/api/python/index.html      |Libreria python per manovrare il cluster Spark                    |
 ## LanguageTool
-Come già anticipato, LanguageTool è un ottimo strumento (utilizzato anche da aziende molto importanti come riportato nell'home page) per individuare (e anche correggere) errori grammaticali presenti in un testo. <br>
+LanguageTool è un ottimo strumento (utilizzato anche da aziende molto importanti come riportato nell'home page) per individuare (e anche correggere) errori grammaticali presenti in un testo. <br>
 La potenza di questo strumento è data dal fatto che supporti moltissime lingue oltre all'inglese. <br>
 Per semplificarci la vita, invece di interagire direttamente con le API, useremo una libreria in Python che farà il lavoro sporco per noi. <br>
 La libreria, come riportato nella tabella, si chiama language_tool_python. <br>
