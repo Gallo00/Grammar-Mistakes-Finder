@@ -6,7 +6,7 @@ A Kibana dashboard is provided for data visualization. <br>
 
 ## Technologies used
 
-|Tecnologia              | Link                                 | Note                                         |
+|Technology              | Link                                 | Note                                         |
 |------------------------|--------------------------------------|----------------------------------------------|
 |Twitter (API)           |https://developer.twitter.com/en      | It's necessary to create a developer account |
 |Docker                  |https://www.docker.com/               | Used to containerize services                |
@@ -39,53 +39,52 @@ The choice depends on two variables which are the computing power of the machine
 ## Application architecture
 ![Pipeline](/review/img/pipeline.png?raw=true "Application architecture")
 
-## Eseguire l'applicazione 
-Prima di eseguire l'applicazione è necessario modificare il file logstash.conf presente nella cartella logstash/pipeline/. <br>
-Andranno inserite le proprie credenziali per l'accesso alle API di Twitter. <br>
-Dunque si dovranno inserire i valori dei seguenti 4 campi:
+## Run the application
+Before running the application you need to modify the file logstash.conf located in logstash/pipeline/.<br>
+You will need to enter your credentials to access the Twitter APIs. <br>
+The values of the following 4 fields must be entered: <br>
 >- consumer_key <br>
 >- consumer_secret <br>
 >- oauth_token <br>
 >- oauth_token_secret <br>
 
-Nota: fare attenzione alla cartella in cui si lanciano i comandi "docker compose".<br>
-E' necessario essere nella cartella del progetto.<br>
+Note: Pay attention to the folder where the "docker compose" commands are launched. <br>
+It' necessary to launch commands in the project folder.<br>
 
-Per usare l'applicazione la prima volta lanciare il comando <br>
+To use the application for the first time, run the command <br>
 >- docker compose up --build <br>
 
-Dopo aver stoppato l'esecuzione lanciare il comando <br>
+After stopping the execution, launch the command <br>
 >- docker compose down <br>
-(senza questa operazione al prossimo avvio dell'applicazione spark-streaming andrà in errore) <br>
+(without this operation; next time the application is started, spark-streaming will fail) <br>
 
-Se si volessero anche resettare tutti i dati relativi all'indice Elastic Search e al servizio Kibana lanciare <br>
+If you also want to reset all the data relating to the Elastic Search index and the Kibana service, launch <br>
 >- docker compose down -v <br>
-al posto del comando <br>
+instead of command <br>
 >- docker compose down <br>
 
-Per riusare l'applicazione lanciare il comando <br>
+To reuse the application run the command <br>
 >- docker compose up <br>
 
-Nel caso invece siano state fatte modifiche al progetto, lanciare per sicurezza il comando
+If, on the other hand, changes have been made to the project, launch the command for safety
 >- docker compose up --build <br>
 
-## Exit status 78 di es01 con esecuzione da WSL
-Il container es01 potrebbe uscire con exit status 78, andando a vedere gli errori probabilmente ci si imbatterà nel messaggio <br>
+## Exit status 78 of es01 running using WSL
+The es01 container could come out with exit status 78, going to see the errors you will probably see the message <br>
 >- "Elasticsearch: Max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]". <br>
-L'errore è causato dal fatto che la memoria concessa alla WSL è troppo bassa. <br>
+The error message states that the memory granted to the WSL is too low <br>
 
-Se dovesse essere così, dovrebbe essere sufficiente lanciare questi 2 comandi su un prompt prima della compose up: <br>
+If this is the case, it should be sufficient to run these two commands using a prompt before compose up: <br>
 >- wsl -d docker-desktop
 >- sysctl -w vm.max_map_count=262144
 
-## Link utili
-Qualche istante dopo aver lanciato la docker compose up sarà possibile accedere ad alcuni servizi, tra cui ovviamente Kibana per visualizzare la/e dashboard 
+## Useful links
+A few moments after launching the docker compose up it will be possible to access some services, obviously including Kibana to view the dashboard (s) 
 
-|Servizio                | Link                   | Note                                              |
+|Service                 | Link                   | Note                                              |
 |------------------------|------------------------|---------------------------------------------------|
-|KafkaUI                 |http://localhost:8080   | Per controllare lo stato dei topic e dei messaggi |
-|Cluster Elastic Search  |https://localhost:9200/ | Per visualizzare l'indice                         |
-|Kibana                  |http://localhost:5601/  | Per accedere alla dashboard                       |
+|KafkaUI                 |http://localhost:8080   | To check the status of topics and their messages  |
+|Cluster Elastic Search  |https://localhost:9200/ | To view the ES index                              |
+|Kibana                  |http://localhost:5601/  | To access the dashboard                           |
 
-## Approfodimenti
-Per approfondire vedere https://github.com/Gallo00/Grammar-Mistakes-Finder/blob/main/review/review.ipynb
+View more (only in Italian) https://github.com/Gallo00/Grammar-Mistakes-Finder/blob/main/review/review.ipynb
