@@ -23,7 +23,7 @@ LanguageTool è un ottimo strumento (utilizzato anche da aziende molto important
 La potenza di questo strumento è data dal fatto che supporti moltissime lingue oltre all'inglese. <br>
 Per semplificarci la vita, invece di interagire direttamente con le API, useremo una libreria in Python che farà il lavoro sporco per noi. <br>
 La libreria, come riportato nella tabella, si chiama language_tool_python. <br>
-**Esempio in python** 
+**Codice di esempio** 
 ```python
 import language_tool_python
 
@@ -34,12 +34,19 @@ print(len(matches)) #4
 ```
 In questo caso usiamo LanguageToolPublicAPI che comporta ovviamente richiamare le API (e sostanzialmente far svolgere i calcoli su un server remoto). <br>
 Un'alternativa potrebbe essere richiamare la funzione LanguageTool('it') che sostanzialmente darebbe lo stesso risultato ma creando un server sulla macchina locale, quindi i calcoli verrebbero fatti in locale. <br>
-La scelta da prendere dipende da due variabili che sono la potenza di calcolo della macchina e la qualità della connessione alla rete. Per approfondire vedere la repo tool https://github.com/jxmorris12/language_tool_python <br>
+La scelta da prendere dipende da due variabili che sono la potenza di calcolo della macchina e la qualità della connessione alla rete. Per approfondire vedere la repo del wrapper https://github.com/jxmorris12/language_tool_python <br>
 
 ## Architettura dell'applicazione
 ![Pipeline](/review/img/pipeline.png?raw=true "Architettura dell'applicazione")
 
 ## Eseguire l'applicazione 
+Prima di eseguire l'applicazione è necessario modificare il file logstash.conf presente nella cartella logstash/pipeline/. <br>
+Andranno inserite le proprie credenziali per l'accesso alle API di Twitter. <br>
+Dunque si dovranno inserire i valori dei seguenti 4 campi:
+>- consumer_key <br>
+>- consumer_secret <br>
+>- oauth_token <br>
+>- oauth_token_secret <br>
 
 Nota: fare attenzione alla cartella in cui si lanciano i comandi "docker compose".<br>
 E' necessario essere nella cartella del progetto.<br>
