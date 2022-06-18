@@ -17,7 +17,7 @@ A Kibana dashboard is provided for data visualization. <br>
 |Kibana                  |https://www.elastic.co/kibana/        | Data Visualization                           |
 |Language Tool           |https://languagetool.org              | Service that, given a text in a certain language, corrects its grammatical errors                     |
 |language_tool_python                  |https://github.com/jxmorris12/language_tool_python/ | Python wrapper that provides a high-level library to call the Language Tool APIs                       |
-|Python + libreria pyspark|https://spark.apache.org/docs/latest/api/python/index.html      |Python library for maneuvering the Spark cluster                    |
+|Python + pyspark|https://spark.apache.org/docs/latest/api/python/index.html      |Python library to manage the Spark cluster                    |
 ## LanguageTool
 LanguageTool is an excellent tool (also used by very important companies as reported on the home page) to identify (and even correct) grammatical errors in a text. <br>
 The power of this tool is that it supports many languages besides English. <br>
