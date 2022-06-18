@@ -23,7 +23,7 @@ LanguageTool is an excellent tool (also used by very important companies as repo
 The power of this tool is that it supports many languages besides English. <br>
 To make our life easier, instead of interacting directly with the API, we will use a library in Python that will do the dirty work for us. <br>
 The library, as shown in the table, is called language_tool_python. <br>
-**Codice di esempio** 
+**Sample code** 
 ```python
 import language_tool_python
 
