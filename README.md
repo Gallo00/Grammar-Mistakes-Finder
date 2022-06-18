@@ -36,7 +36,7 @@ In this case we use LanguageToolPublicAPI which obviously involves calling the A
 An alternative could be to call the LanguageTool('it') function which would basically give the same result but creating a server on the local machine, so the calculations would be done locally. <br>
 The choice depends on two variables which are the computing power of the machine and the quality of connection to the network. View more https://github.com/jxmorris12/language_tool_python <br>
 
-## Application architecture
+## Architecture
 ![Pipeline](/review/img/pipeline.png?raw=true "Application architecture")
 
 ## Run the application
