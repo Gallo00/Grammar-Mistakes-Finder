@@ -32,7 +32,7 @@ s = "sto faccendo un erore gramma"
 matches = tool.check(s)
 print(len(matches)) #4
 ```
-In questo caso usiamo LanguageToolPublicApi che comporta ovviamente richiamare le API (e sostanzialmente far svolgere i calcoli su un server remoto). <br>
+In questo caso usiamo LanguageToolPublicAPI che comporta ovviamente richiamare le API (e sostanzialmente far svolgere i calcoli su un server remoto). <br>
 Un'alternativa potrebbe essere richiamare la funzione LanguageTool('it') che sostanzialmente darebbe lo stesso risultato ma creando un server sulla macchina locale, quindi i calcoli verrebbero fatti in locale. <br>
 La scelta da prendere dipende da due variabili che sono la potenza di calcolo della macchina e la qualità della connessione alla rete. Per approfondire vedere la repo tool https://github.com/jxmorris12/language_tool_python <br>
 
