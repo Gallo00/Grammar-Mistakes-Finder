@@ -92,7 +92,7 @@ To import the file, open the "hamburger" at the top left of the Kibana page, ope
 ![Pipeline](/importDB/tutorial/5import2.JPG?raw=true "step5") <br>
 
 
-## Exit status 78 of es01 running using WSL
+## Exit status 78 of es01 using WSL
 The es01 container could come out with exit status 78, going to see the errors you will probably see the message <br>
 >- "Elasticsearch: Max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]". <br>
 The error message states that the memory granted to the WSL is too low <br>
