@@ -40,6 +40,7 @@ The choice depends on two variables which are the computing power of the machine
 ![Pipeline](/review/img/pipeline.png?raw=true "Application architecture")
 
 ## Run the application
+Docker must be running on your computer <br> <br>
 Before running the application you need to modify the file logstash.conf located in logstash/pipeline/.<br>
 You will need to enter your credentials to access the Twitter APIs. <br>
 The values of the following 4 fields must be entered: <br>
