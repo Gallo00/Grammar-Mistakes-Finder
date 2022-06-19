@@ -48,10 +48,10 @@ The values of the following 4 fields must be entered: <br>
 >- oauth_token <br>
 >- oauth_token_secret <br>
 
-Un'altra operazione necessaria prima di avviare l'applicazione per la prima volta è eseguire il seguente comando
+Another necessary step before running the application for the first time is to run the following command
 >- docker network create -d bridge --subnet 10.0.100.0/16 tap <br>
-Verrà creata una network per collegare i vari container
-Nota: su ambiente Windows si deve utilizzare la WSL
+A network will be created to connect the various containers <br>
+Note: WSL must be used on a Windows environment <br>
 
 Note: Pay attention to the folder where the "docker compose" commands are launched. <br>
 It' necessary to launch commands in the project folder.<br>
@@ -74,13 +74,13 @@ To reuse the application run the command <br>
 If, on the other hand, changes have been made to the project, launch the command for safety
 >- docker compose up --build <br>
 
-# Credenziali per Kibana e Elastic
+### Credentials for Kibana and Elastic
 >- user: elastic
 >- password: passwordTAP
 
-## Importare la dashboard in Kibana
-Nella cartella "importDB" è presente il file "export.ndjson" che contiene delle configurazioni per poter usare una dashboard già implementata. <br>
-Per importare il file si deve aprire l' "hamburger" in altro a sinistra della pagina di Kibana, aprire "Stack Management", "Saved Objects", cliccare su "import", trascinare il file ndjson e poi premere "import". <br>
+## Import the dashboard into Kibana
+In the "importDB" folder there is the "export.ndjson" file which contains configurations to be able to use an already implemented dashboard. <br>
+To import the file, open the "hamburger" at the top left of the Kibana page, open "Stack Management", "Saved Objects", click on "import", drag the ndjson file and then press "import". <br>
 
 ![Pipeline](/importDB/tutorial/1hamburger.JPG?raw=true "step1") <br>
 ![Pipeline](/importDB/tutorial/2stack_management.JPG?raw=true "step2") <br>
