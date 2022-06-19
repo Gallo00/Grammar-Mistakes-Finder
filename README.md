@@ -48,6 +48,11 @@ The values of the following 4 fields must be entered: <br>
 >- oauth_token <br>
 >- oauth_token_secret <br>
 
+Un'altra operazione necessaria prima di avviare l'applicazione per la prima volta è eseguire il seguente comando
+>- docker network create -d bridge --subnet 10.0.100.0/16 tap <br>
+Verrà creata una network per collegare i vari container
+Nota: su ambiente Windows si deve utilizzare la WSL
+
 Note: Pay attention to the folder where the "docker compose" commands are launched. <br>
 It' necessary to launch commands in the project folder.<br>
 
@@ -68,6 +73,21 @@ To reuse the application run the command <br>
 
 If, on the other hand, changes have been made to the project, launch the command for safety
 >- docker compose up --build <br>
+
+# Credenziali per Kibana e Elastic
+>- user: elastic
+>- password: passwordTAP
+
+## Importare la dashboard in Kibana
+Nella cartella "importDB" è presente il file "export.ndjson" che contiene delle configurazioni per poter usare una dashboard già implementata. <br>
+Per importare il file si deve aprire l' "hamburger" in altro a sinistra della pagina di Kibana, aprire "Stack Management", "Saved Objects", cliccare su "import", trascinare il file ndjson e poi premere "import". <br>
+
+![Pipeline](/importDB/tutorial/1hamburger.JPG?raw=true "step1") <br>
+![Pipeline](/importDB/tutorial/2stack_management.JPG?raw=true "step2") <br>
+![Pipeline](/importDB/tutorial/3saved_obj.JPG?raw=true "step3") <br>
+![Pipeline](/importDB/tutorial/4import.JPG?raw=true "step4") <br>
+![Pipeline](/importDB/tutorial/5import2.JPG?raw=true "step5") <br>
+
 
 ## Exit status 78 of es01 running using WSL
 The es01 container could come out with exit status 78, going to see the errors you will probably see the message <br>
