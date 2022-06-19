@@ -42,7 +42,7 @@ The choice depends on two variables which are the computing power of the machine
 ## Run the application
 Download this repo as you want <br> <br>
 Docker must be running on your computer <br> <br>
-Before running the application you need to modify the file logstash.conf located in logstash/pipeline/.<br>
+Before running the application you need to modify the file logstash.conf located in logstash/pipeline/<br>
 You will need to enter your credentials to access the Twitter APIs. <br>
 The values of the following 4 fields must be entered: <br>
 >- consumer_key <br>
@@ -52,6 +52,7 @@ The values of the following 4 fields must be entered: <br>
 
 Another necessary step before running the application for the first time is to run the following command
 >- docker network create -d bridge --subnet 10.0.100.0/16 tap <br>
+
 A network will be created to connect the various containers <br>
 Note: WSL must be used on a Windows environment <br>
 
