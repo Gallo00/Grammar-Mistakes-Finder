@@ -54,7 +54,7 @@ Another necessary step before running the application for the first time is to r
 >- docker network create -d bridge --subnet 10.0.100.0/16 tap <br>
 
 A network will be created to connect the various containers <br>
-Note: WSL must be used on a Windows environment <br>
+Note: on a Windows environment you have to use WSL 2<br>
 
 Note: Pay attention to the folder where the "docker compose" commands are launched. <br>
 It' necessary to launch commands in the project folder.<br>
