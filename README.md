@@ -19,7 +19,7 @@ A Kibana dashboard is provided for data visualization. <br>
 |language_tool_python                  |https://github.com/jxmorris12/language_tool_python/ | Python wrapper that provides a high-level library to call the Language Tool APIs                       |
 |Python + pyspark|https://spark.apache.org/docs/latest/api/python/index.html      |Python library to manage the Spark cluster                    |
 ## LanguageTool
-LanguageTool is an excellent tool (also used by very important companies as reported on the home page) to identify (and even correct) grammatical errors in a text. <br>
+LanguageTool is an excellent tool (also used by very important companies as reported on the home page) to detect (and even correct) grammatical errors in a text. <br>
 The power of this tool is that it supports many languages besides English. <br>
 To make our life easier, instead of interacting directly with the API, we will use a library in Python that will do the dirty work for us. <br>
 The library, as shown in the table, is called language_tool_python. <br>
@@ -74,7 +74,7 @@ instead of command <br>
 To reuse the application run the command <br>
 >- docker compose up <br>
 
-If, on the other hand, changes have been made to the project, launch the command for safety
+If, on the other hand, changes have been made to the project, launch this command for safety
 >- docker compose up --build <br>
 
 ### Credentials for Kibana and Elastic
