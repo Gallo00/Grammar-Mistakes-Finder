@@ -1,0 +1,24 @@
+commit 80c352751eb17c58756f7afac150118fa1bda77c
+Author: Gallo00 <samueleg0013@gmail.com>
+Date:   Mon Jul 11 16:24:24 2022 +0200
+
+    Update logstash.conf
+
+diff --git a/logstash/pipeline/logstash.conf b/logstash/pipeline/logstash.conf
+index 21ae114..e6bc06e 100644
+--- a/logstash/pipeline/logstash.conf
++++ b/logstash/pipeline/logstash.conf
+@@ -1,9 +1,9 @@
+ input {
+   twitter {
+-      consumer_key => "R2axAPh7Cctq2szNIcf3Mt9nH"
+-      consumer_secret => "VN0hDlPGhwty1a20FHnJ9SwQm0836pXEFR6dEZ2nJMZgF6Hpig"
+-      oauth_token => "2757688281-qz7ZRMQGl0W36ZcJopP7oAN6rgTwrAc4iyJE9C0"
+-      oauth_token_secret => "G9RpvLpug5wlnQGZ7SSOOHzfsrqWtCLsItI9LbR9JZeG6"
++      consumer_key => "your consume_key"
++      consumer_secret => "your consumer_secret"
++      oauth_token => "your oauth_token"
++      oauth_token_secret => "your oauth_token_secret"
+ 
+       full_tweet => true # otteniamo tutte le informazioni del tweet
+       use_samples => true # selezioniamo tweet random da tutto il mondo 
