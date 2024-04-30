@@ -11,10 +11,10 @@ index 21ae114..e6bc06e 100644
 @@ -1,9 +1,9 @@
  input {
    twitter {
--      consumer_key => "R2axAPh7Cctq2szNIcf3Mt9nH"
--      consumer_secret => "VN0hDlPGhwty1a20FHnJ9SwQm0836pXEFR6dEZ2nJMZgF6Hpig"
--      oauth_token => "2757688281-qz7ZRMQGl0W36ZcJopP7oAN6rgTwrAc4iyJE9C0"
--      oauth_token_secret => "G9RpvLpug5wlnQGZ7SSOOHzfsrqWtCLsItI9LbR9JZeG6"
+-      consumer_key => ""
+-      consumer_secret => ""
+-      oauth_token => ""
+-      oauth_token_secret => ""
 +      consumer_key => "your consume_key"
 +      consumer_secret => "your consumer_secret"
 +      oauth_token => "your oauth_token"
